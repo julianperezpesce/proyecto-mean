@@ -11,6 +11,11 @@ app.use('/api/user/', user)
 const port = process.env.PORT || 3003
 app.listen(port, ()=> console.log(`Escuchando puerto ${port}`))
 
-mongoose.connect('mongodb://localhost/task', {useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost/task', {
+    useNewUrlParser: true, 
+    useFindAndModify: false, 
+    useCreateIndex: true, 
+    useUnifiedTopology: true
+})
     .then(()=> console.log('Conectado a MongoDb'))
     .catch(error => console.log('No se ha conetado a MongoDb'))
