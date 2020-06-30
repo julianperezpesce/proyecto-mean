@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-userSchema.method.generateJWT = function(){
+userSchema.methods.generateJWT = function(){
     return jwt.sign({
         _id: this._id,
         name: this.name,
@@ -28,7 +28,7 @@ userSchema.method.generateJWT = function(){
     }, "secretKey")
 }
 
-const User = mongoose.Schema('user', userSchema)
+const User = mongoose.model('user', userSchema)
 
 module.exports.User = User
 module.exports.userSchema = userSchema

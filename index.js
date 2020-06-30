@@ -8,14 +8,9 @@ const app = express()
 app.use(express.json())
 app.use('/api/user/', user)
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3003
 app.listen(port, ()=> console.log(`Escuchando puerto ${port}`))
 
-mongoose.connect('mongodb://localhost/task',{
-    useNewUrlParser: true, 
-    useFindAndModify: false, 
-    useCreateIndex: true, 
-    useUnifiedTopology: true
-})
-    .then(()=> console.log('Conectado a MongoDB'))
-    .catch(error => console.log('No se ha conectado a MongoDB'))
+mongoose.connect('mongodb://localhost/task', {useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true})
+    .then(()=> console.log('Conectado a MongoDb'))
+    .catch(error => console.log('No se ha conetado a MongoDb'))
