@@ -8,7 +8,7 @@ router.post('/', async(req, res)=>{
     })
 
     //If the user already exist
-    if(user) return res.status(400).send('EL usuario ya existe')
+    if(user) return res.status(400).send('El usuario ya existe')
     
     //if not, we create a new one
     user = new User({
