@@ -17,5 +17,5 @@ mongoose.connect('mongodb://localhost/task', {
     useCreateIndex: true, 
     useUnifiedTopology: true
 })
-    .then(()=> console.log('Conectado a MongoDb'))
-    .catch(error => console.log('No se ha conetado a MongoDb'))
+    .then(()=> console.log('Conectado a MongoDB'))
+    .catch(error => console.log('No se ha conectado a MongoDB'))
